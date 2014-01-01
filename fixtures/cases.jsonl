@@ -1,0 +1,1 @@
+{"description": "reject boolean response status values", "expected_error": true, "id": "contracts-0000", "input": {"payload": {"items": [{"id": 1, "name": "Cafe 0"}, {"id": 2, "name": "Shop 0"}], "next_cursor": null}, "status": true}}
