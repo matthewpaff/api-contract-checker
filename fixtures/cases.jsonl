@@ -1,2 +1,3 @@
 {"description": "reject boolean response status values", "expected_error": true, "id": "contracts-0000", "input": {"payload": {"items": [{"id": 1, "name": "Cafe 0"}, {"id": 2, "name": "Shop 0"}], "next_cursor": null}, "status": true}}
 {"description": "reject duplicate page item IDs", "expected_error": true, "id": "contracts-0001", "input": {"payload": {"items": [{"id": 11, "name": "Cafe 1"}, {"id": 11, "name": "Cafe 1"}], "next_cursor": null}, "status": 200}}
+{"description": "reject cursors that differ from the last item ID", "expected_error": true, "id": "contracts-0002", "input": {"payload": {"items": [{"id": 21, "name": "Cafe 2"}, {"id": 22, "name": "Shop 2"}], "next_cursor": 121}, "status": 200}}
