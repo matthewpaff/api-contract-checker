@@ -24,3 +24,4 @@
 {"description": "reject blank listing names", "expected_error": true, "id": "contracts-0023", "input": {"payload": {"items": [{"id": 231, "name": "   "}, {"id": 232, "name": "Shop 23"}], "next_cursor": null}, "status": 200}}
 {"description": "reject malformed structured error codes", "expected_error": true, "id": "contracts-0024", "input": {"payload": {"error": {"code": "Bad Code", "message": "Invalid request"}}, "status": 400}}
 {"description": "accept a structured 404 response", "expected": {"code": "not_found", "kind": "error", "status": 404}, "id": "contracts-0025", "input": {"payload": {"error": {"code": "not_found", "message": "Mock error 25"}}, "status": 404}}
+{"description": "accept a structured 429 response", "expected": {"code": "rate_limited", "kind": "error", "status": 429}, "id": "contracts-0026", "input": {"payload": {"error": {"code": "rate_limited", "message": "Mock error 26"}}, "status": 429}}
