@@ -135,3 +135,4 @@
 {"description": "reject malformed structured error codes", "expected_error": true, "id": "contracts-0134", "input": {"payload": {"error": {"code": "Bad Code", "message": "Invalid request"}}, "status": 400}}
 {"description": "accept a structured 404 response", "expected": {"code": "not_found", "kind": "error", "status": 404}, "id": "contracts-0135", "input": {"payload": {"error": {"code": "not_found", "message": "Mock error 135"}}, "status": 404}}
 {"description": "accept a structured 429 response", "expected": {"code": "rate_limited", "kind": "error", "status": 429}, "id": "contracts-0136", "input": {"payload": {"error": {"code": "rate_limited", "message": "Mock error 136"}}, "status": 429}}
+{"description": "accept an empty terminal result page", "expected": {"has_next": false, "item_count": 0, "kind": "page", "status": 200}, "id": "contracts-0137", "input": {"payload": {"items": [], "next_cursor": null}, "status": 200}}
