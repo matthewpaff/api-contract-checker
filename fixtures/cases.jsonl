@@ -232,3 +232,4 @@
 {"description": "reject duplicate page item IDs", "expected_error": true, "id": "contracts-0231", "input": {"payload": {"items": [{"id": 2311, "name": "Cafe 231"}, {"id": 2311, "name": "Cafe 231"}], "next_cursor": null}, "status": 200}}
 {"description": "reject cursors that differ from the last item ID", "expected_error": true, "id": "contracts-0232", "input": {"payload": {"items": [{"id": 2321, "name": "Cafe 232"}, {"id": 2322, "name": "Shop 232"}], "next_cursor": 2421}, "status": 200}}
 {"description": "reject blank listing names", "expected_error": true, "id": "contracts-0233", "input": {"payload": {"items": [{"id": 2331, "name": "   "}, {"id": 2332, "name": "Shop 233"}], "next_cursor": null}, "status": 200}}
+{"description": "reject malformed structured error codes", "expected_error": true, "id": "contracts-0234", "input": {"payload": {"error": {"code": "Bad Code", "message": "Invalid request"}}, "status": 400}}
