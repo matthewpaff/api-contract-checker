@@ -283,3 +283,4 @@
 {"description": "reject cursors that differ from the last item ID", "expected_error": true, "id": "contracts-0282", "input": {"payload": {"items": [{"id": 2821, "name": "Cafe 282"}, {"id": 2822, "name": "Shop 282"}], "next_cursor": 2921}, "status": 200}}
 {"description": "reject blank listing names", "expected_error": true, "id": "contracts-0283", "input": {"payload": {"items": [{"id": 2831, "name": "   "}, {"id": 2832, "name": "Shop 283"}], "next_cursor": null}, "status": 200}}
 {"description": "reject malformed structured error codes", "expected_error": true, "id": "contracts-0284", "input": {"payload": {"error": {"code": "Bad Code", "message": "Invalid request"}}, "status": 400}}
+{"description": "accept a structured 404 response", "expected": {"code": "not_found", "kind": "error", "status": 404}, "id": "contracts-0285", "input": {"payload": {"error": {"code": "not_found", "message": "Mock error 285"}}, "status": 404}}
