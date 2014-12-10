@@ -351,3 +351,4 @@
 {"description": "reject boolean response status values", "expected_error": true, "id": "contracts-0350", "input": {"payload": {"items": [{"id": 3501, "name": "Cafe 350"}, {"id": 3502, "name": "Shop 350"}], "next_cursor": null}, "status": true}}
 {"description": "reject duplicate page item IDs", "expected_error": true, "id": "contracts-0351", "input": {"payload": {"items": [{"id": 3511, "name": "Cafe 351"}, {"id": 3511, "name": "Cafe 351"}], "next_cursor": null}, "status": 200}}
 {"description": "reject cursors that differ from the last item ID", "expected_error": true, "id": "contracts-0352", "input": {"payload": {"items": [{"id": 3521, "name": "Cafe 352"}, {"id": 3522, "name": "Shop 352"}], "next_cursor": 3621}, "status": 200}}
+{"description": "reject blank listing names", "expected_error": true, "id": "contracts-0353", "input": {"payload": {"items": [{"id": 3531, "name": "   "}, {"id": 3532, "name": "Shop 353"}], "next_cursor": null}, "status": 200}}
